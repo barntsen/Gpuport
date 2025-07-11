@@ -16,26 +16,28 @@ def getdata(file) :
     return(x,y)
 
 path = '../Tests/GH200/Eps/'
-file=path+'log.txt'
+file=path+'log-cuda.txt'
 x1,y1 = getdata(file)
 
 path = '../Tests/GH200/Cuda/'
 file=path+'log.txt'
 x2,y2 = getdata(file)
 
+path = '../Tests/GH200/Cuda-um/'
+file=path+'log.txt'
+x3,y3 = getdata(file)
 
 # Plotting
 fig = pl.figure()
 #pl.xticks(np.arange(0,3.1,1))
 x1=x1*x1
 x2=x2*x2
-#x3=x3*x3
-#x4=x4*x4
-#x5=x5*x5
+x3=x3*x3
 pl.xscale("log", base=10)
 pl.yscale("log", base=10)
-l1=pl.plot(x1,y1,label='Eps ',color='black',marker='o',linestyle='solid')
+l1=pl.plot(x1,y1,label='Eps',color='black',marker='o',linestyle='solid')
 l2=pl.plot(x2,y2,label='Cuda',color='red',marker='o',linestyle='solid')
+l3=pl.plot(x3,y3,label='Cuda um',color='blue',marker='o',linestyle='solid')
 
 pl.legend(loc='upper left')
 pl.xlabel('Model dimension')
