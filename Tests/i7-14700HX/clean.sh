@@ -4,7 +4,7 @@ cd Eps
 ./clean.sh
 cd ..
 
-cd Omp
+cd C
 ./clean.sh
 cd ..
 
