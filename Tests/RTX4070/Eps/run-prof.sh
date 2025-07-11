@@ -27,7 +27,7 @@ spike -n1 $n1 -n2 $n2 -val 100000.0 q.bin
 BIN=../../../Src/Eps
 export NBLOCKS=$nblocks
 export NTHREADS=$nthreads
-nsys nvprof -m flops_sp $BIN/ac2dmod $n1 $n2 $nt $resamp $sresamp  
+nsys nvprof -m flops_sp $BIN/ac2dmod$1 $n1 $n2 $nt $resamp $sresamp  
 
 #./snp.sh
 

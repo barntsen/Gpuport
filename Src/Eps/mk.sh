@@ -42,5 +42,5 @@ $cc  $f -d -O   ac2d.e
 $cc  $f -d -O   ac2dmod.e
 
 ar rcs $lib.a ac2d.o diff.o model.o src.o rec.o
-$ld $omp -o ac2dmod+$1 ac2dmod.o ac2d.o diff.o model.o src.o rec.o
+$ld $omp -o ac2dmod$1 ac2dmod.o ac2d.o diff.o model.o src.o rec.o
 

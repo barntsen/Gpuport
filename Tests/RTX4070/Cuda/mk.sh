@@ -3,7 +3,7 @@
 
 ./clean.sh
 
-nt=1501 
+nt=5001
 resamp=0 
 sresamp=0
 nthreads=128

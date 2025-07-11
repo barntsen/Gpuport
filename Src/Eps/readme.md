@@ -7,20 +7,35 @@ using a source-to-source translator (transpiler).
 The transpiler is named eps and found in a separate github repo: 
 [Eps](https://github.com/barntsen/Eps.git)
 
+## Compiling
+To compile the code  type 
+
+    mk.sh c
+
+for compiling to c. The executable is called ac2dmodc and runs
+on cpu's (single core). 
+
+For multicore type
+
+    mk.sh omp
+
+for compiling using OpenMp. The executable is called ac2dmodomp.
+
+For accelaration on gpu, type
+
+    mk.sh c
+
+for compiling to cuda. 
+The executable is called ac2dmodcuda and
+can run on NVIDIA gpu's.
+    
+
 ## List of source files
 - mk.sh   : Script for compiling the source code
 - clean.sh: Clean script
-- ac2d.i  : Solver interface
 - ac2d.e  : Solver methods
-- diff.i  : Differentiator interface
 - diff.e  : Differentiator methods
-- model.i : Model interface
 - model.e : Model methods
-- rec.i   : Receiver interface
 - rec.e   : Receiver methods
-- src.i   : Source interface
 - src.e   : Source methods
 - ac2dmod.e : Example code to for using the library
-
-
-
